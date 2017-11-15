@@ -10,9 +10,9 @@ public class MyPanelClass extends JPanel {
 	private static final long serialVersionUID = 7057541440811488699L;
 
 			public void paintComponent(Graphics g) {
-                        super.paintComponent(g);
+				super.paintComponent(g);
  
-                        //Compute interior coordinates
+                //Compute interior coordinates
                         Insets myInsets = this.getInsets();
                         int x1 = myInsets.left;
                         int y1 = myInsets.top;
@@ -21,16 +21,27 @@ public class MyPanelClass extends JPanel {
                         int width = x2 - x1;
                         int height = y2 - y1;
  
-                        //Paint the background
-                        g.setColor(Color.DARK_GRAY);
-                        g.fillRect(x1, y1, width + 1, height + 1);
-                        
-                        //Draw a border
-                        g.setColor(Color.YELLOW);
-                        g.drawRect(x1, y1, width, height);
-                        
-                        //Draw a border2
-                        g.setColor(Color.BLUE);
-                        g.drawRect(x1 + 10, y1 + 10, width - 20, height - 20);
+                //Paint the background
+                g.setColor(Color.DARK_GRAY);
+                g.fillRect(x1, y1, width + 1, height + 1);
+                
+//                //Draw a border
+//                g.setColor(Color.YELLOW);
+//                g.drawRect(x1, y1, width, height);
+//                
+//                //Draw a border2
+//                g.setColor(Color.BLUE);
+//                g.drawRect(x1 + 10, y1 + 10, width - 20, height - 20);
+//                
+//                //Line
+//                g.setColor(Color.WHITE);
+//                g.drawLine(x1, y1, x2, y2);
+//                
+//                //Line2
+//                g.setColor(Color.ORANGE);
+//                g.drawLine(x2, y1, x1, y2);
+                
+                g.setColor(Color.LIGHT_GRAY);
+                g.fillOval((width - 55)/2, (height - 55)/2, 55, 55);
             }
 }
